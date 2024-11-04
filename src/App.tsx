@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
 
 // Importing Page Components
