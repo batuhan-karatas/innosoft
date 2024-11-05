@@ -1,0 +1,58 @@
+.hero-section {
+    background-image:url('../../../../public/assets/home/first-section-bg.png') ;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3rem 0 3rem;
+}
+
+
+.hero-info {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.hero-info h1 {
+    text-align: start;
+    font-size: 3rem;
+    width: 70%;
+}
+.hero-info p {
+    text-align: start;
+    font-weight: 500;
+    width: 90%;
+}
+.hero-info button {
+    background: linear-gradient(to right, #FA8305 0%, #FB9E3C 100%);
+    color: white; 
+    padding: 1rem 1.5rem; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transition for background and shadow */
+    width: fit-content;
+}
+
+.hero-info button:hover {
+    background: linear-gradient(to right, #FB9E3C 0%, #FA8305 100%); /* Background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+
+.badge {
+    color: #E87D0E;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: start;
+}
+
+.hero-image img{
+    width: 80%;
+
+}
