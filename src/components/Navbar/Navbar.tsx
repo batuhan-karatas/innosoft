@@ -3,11 +3,14 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../../public/assets/innosoft-white.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { NavLinkComponentPropType } from "./type";
 
-// Navbar component definition
+
 function Navbar() {
+
   // State to control sidebar visibility
   const [sidebar, setSidebar] = useState<boolean>(false);
 
@@ -24,6 +27,7 @@ function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
   // Effect to lock/unlock body scroll when the sidebar is open
   useEffect(() => {
     if (sidebar) {
@@ -37,6 +41,8 @@ function Navbar() {
       document.body.style.overflow = '';
     };
   }, [sidebar]);
+
+
 
   // NavLinkComponent to render navigation items, with configurable flex direction
   const NavLinkComponent = ({ flexDirectionClass }: NavLinkComponentPropType) => {
@@ -77,6 +83,19 @@ function Navbar() {
   };
 
   return (
+    <>
+    <div>
+      <div className="navbar-banner">
+        <p>
+          <IoLocationSharp />
+          Mrs Smith 813 Howard Street Oswego NY 13126 USA
+        </p>
+        <p>
+          <FaPhoneAlt />
+          212-555-6789
+        </p>
+      </div>
+    </div>
     <nav className="navbar">
       {/* Logo linking to home */}
       <Link to='/'>
@@ -106,6 +125,7 @@ function Navbar() {
         <div className="sidebar-darkarea" onClick={() => setSidebar(false)}></div>
       )}
     </nav>
+    </>
   );
 }
 
